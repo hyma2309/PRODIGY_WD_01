@@ -39,3 +39,88 @@
   <script src="scripts.js"></script>
 </body>
 </html>
+# styles.css
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #f4f4f4;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(45deg, #007bff, #00aaff);
+  z-index: 1000;
+  transition: background 0.3s ease;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 15px 20px;
+  display: block;
+  font-size: 1.2rem;
+  transition: background 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: yellow;
+  border-radius: 5px;
+}
+
+/* Scroll change */
+nav.scrolled {
+  background: linear-gradient(45deg, #00274d, #004a7c);
+}
+
+section {
+  padding: 100px 20px;
+  min-height: 100vh;
+}
+
+#home {
+  background: #007bff;
+  color: white;
+}
+
+#about {
+  background: #00aaff;
+}
+
+#services {
+  background: #4c6ef5;
+}
+
+#contact {
+  background: #f4f4f4;
+}
+#scripts.js
+// Change navbar style when scrolling
+window.addEventListener('scroll', function () {
+  const navbar = document.getElementById('navbar');
+  if (window.scrollY > 50) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+});
+
